@@ -1,0 +1,17 @@
+[package]
+name = "keying"
+version = "0.1.2"
+description = "ML background removal (isnet-general-use via onnxruntime) and closed-form matting in pure Rust."
+authors = ["Oscar"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/dev-caballero/keying"
+keywords = ["background-removal", "matting", "onnxruntime", "isnet"]
+edition = "2021"
+rust-version = "1.77.2"
+
+[dependencies]
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+ndarray = "0.17"
+ort = { version = "2.0.0-rc.13", features = ["ndarray"] }
+parking_lot = "0.12"
